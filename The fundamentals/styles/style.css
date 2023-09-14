@@ -5,31 +5,12 @@
    box-sizing: border-box;
 }
 
-.header,
-.container {
-   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 body {
    font-family:'Oswald', Arial, Helvetica, sans-serif;
    color: black;
-   background: linear-gradient(-45deg, #5156e7, #50ed3c, #ed4cd5, #23d5ab);
+   background: linear-gradient(-45deg, #c1c1c3, #ffffff, #0b0a0a, #676a69);
 	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
@@ -54,38 +35,9 @@ a:hover {
    color: white;
 }
 
-.wrapper {
-   display: flex;
-   min-height: 100%;
-   overflow: hidden;
-   flex-direction: column;
-   max-width: 1440px;
-   margin: 20px 100px;
-}
-
-.container {
-   display: flex;
-   justify-content: space-between;
-   margin: 30px 100px;
-   border: 5px white solid;
-   color: white;
-}
-
 h2 {
    text-align: center;
    font-weight:800;
-}
-
-.header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px 30px;
-}
-
-.logo {
-   color: black;
-   text-align: center;
 }
 
 h1, h2 {
@@ -106,19 +58,103 @@ h1, h2 {
       }
    }
 
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   max-width: 1440px;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 2em;
+}
+
+.header,
+.container {
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	border: 5px white solid;
+   background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1em 2em;
+}
+
+.logo {
+   display: flex;
+   width: 650px;
+   align-items: center;
+   justify-content: space-between;
+}
+
 .humor-list {
    display: flex;
 }
 
 .humor-list-item {
    list-style-type: none;
-   margin-right: 45px;
+   margin-right: 3em;
 }
 
 .humor-list-item:last-child {
    margin-right: 0;
 }
 
-.container-left {
-   width: 450px;
+.container {
+   display: flex;
+   justify-content: space-evenly;
+   padding: 1em 0;
+   margin: 2em 3.5em;
+   color: white;
 }
+
+.container-left {
+   width: 600px;
+}
+
+.container-left-paragraph-1 {
+   margin: 1em;
+   text-align: center;
+   font-size: larger;
+}
+
+.container-left-audio {
+   display: flex;
+   align-items: center;
+   margin-top: 1em;
+   gap: 1em;
+   font-size: x-large;
+}
+
+.container-left-audio-paragraph {
+   background: black;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: blink 2s linear infinite;
+}
+      
+   @keyframes blink {
+      0% {
+         opacity: 0;
+      }
+      50% {
+         opacity: .5;
+      }
+      100% {
+         opacity: 1;
+      }
+      }
