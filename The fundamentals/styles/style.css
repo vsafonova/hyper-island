@@ -5,9 +5,8 @@
    box-sizing: border-box;
 }
 
+.header,
 body {
-   font-family:'Oswald', Arial, Helvetica, sans-serif;
-   color: black;
    background: linear-gradient(-45deg, #c1c1c3, #ffffff, #0b0a0a, #676a69);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
@@ -25,14 +24,19 @@ body {
 	}
 }
 
-a {
-   cursor: pointer;
-   text-decoration: none;
+body {
+   font-family:'Oswald', Arial, Helvetica, sans-serif;
    color: black;
 }
 
+a {
+   cursor: pointer;
+   text-decoration: none;
+   color: rgb(255, 34, 0);
+}
+
 a:hover {
-   color: white;
+   color: rgb(72, 255, 0);
 }
 
 h2 {
@@ -42,7 +46,7 @@ h2 {
 
 h1, h2 {
    font-family: sans-serif; /* choosing our font */
-   background: linear-gradient(to right, rgb(74, 4, 252) 0%, rgb(255, 230, 4) 20%, rgb(255, 255, 255) 61%), linear-gradient(rgb(0, 0, 0) 52%, rgba(0, 0, 0, 0.915) 60%, rgb(250, 3, 3) 61%); /* you can change the colors based on your preference */
+   background: linear-gradient(to right, rgb(74, 4, 252) 0%, rgb(255, 230, 4) 20%, rgb(43, 255, 10) 61%), linear-gradient(rgb(0, 0, 0) 52%, rgba(0, 0, 0, 0.915) 60%, rgb(250, 3, 3) 61%); /* you can change the colors based on your preference */
    -webkit-background-clip: text; /*it defines how far the background should extend within an element, here we set it to text */
       background-clip: text; /*for browsers compatibility */
       -webkit-text-fill-color: transparent; /* specifies the fill color of text characters. We use transparent to use the background as our text fill  */
@@ -67,7 +71,6 @@ h1, h2 {
    margin-top: 2em;
 }
 
-.header,
 .container {
    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	border: 5px white solid;
@@ -89,14 +92,14 @@ h1, h2 {
 
 .header {
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
    padding: 1em 2em;
 }
 
 .logo {
    display: flex;
-   width: 650px;
+   width: 630px;
    align-items: center;
    justify-content: space-between;
 }
@@ -107,7 +110,7 @@ h1, h2 {
 
 .humor-list-item {
    list-style-type: none;
-   margin-right: 3em;
+   margin-right: 2em;
 }
 
 .humor-list-item:last-child {
@@ -123,7 +126,7 @@ h1, h2 {
 }
 
 .container-left {
-   width: 630px;
+   width: 555px;
 }
 
 .container-left-paragraph-1 {
