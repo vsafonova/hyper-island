@@ -43,8 +43,8 @@ h2 {
 h1, h2 {
    font-family: sans-serif; /* choosing our font */
    background: linear-gradient(to right, rgb(74, 4, 252) 0%, rgb(255, 230, 4) 20%, rgb(255, 255, 255) 61%), linear-gradient(rgb(0, 0, 0) 52%, rgba(0, 0, 0, 0.915) 60%, rgb(250, 3, 3) 61%); /* you can change the colors based on your preference */
-   background-clip: text; /*it defines how far the background should extend within an element, here we set it to text */
-      -webkit-background-clip: text; /*for browsers compatibility */
+   -webkit-background-clip: text; /*it defines how far the background should extend within an element, here we set it to text */
+      background-clip: text; /*for browsers compatibility */
       -webkit-text-fill-color: transparent; /* specifies the fill color of text characters. We use transparent to use the background as our text fill  */
    animation: wave 2000ms ease alternate infinite;
    transition: all 0.4s ease;
