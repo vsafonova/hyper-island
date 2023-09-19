@@ -5,11 +5,12 @@
    box-sizing: border-box;
 }
 
-.header,
 body {
-   background: linear-gradient(-45deg, #c1c1c3, #ffffff, #0b0a0a, #676a69);
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+   font-family:'Oswald', Arial, Helvetica, sans-serif;
+   color: black;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+   background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
@@ -24,19 +25,23 @@ body {
 	}
 }
 
-body {
-   font-family:'Oswald', Arial, Helvetica, sans-serif;
-   color: black;
+.header, 
+.container {
+   border: 5px rgb(0, 0, 0, 0.7) solid;
+   border-radius: 4em;
+   background-color: rgb(0, 0, 0, 0.4);
 }
 
 a {
    cursor: pointer;
    text-decoration: none;
-   color: rgb(255, 34, 0);
+   color: rgb(0, 255, 242);
 }
 
 a:hover {
-   color: rgb(72, 255, 0);
+   color: #e73c7e;
+   text-decoration: underline;
+   font-size: larger;
 }
 
 h2 {
@@ -71,25 +76,6 @@ h1, h2 {
    margin-top: 2em;
 }
 
-.container {
-   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	border: 5px white solid;
-   background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 .header {
    display: flex;
    justify-content: space-around;
@@ -102,6 +88,11 @@ h1, h2 {
    width: 630px;
    align-items: center;
    justify-content: space-between;
+}
+
+.logo img:hover {
+   width: 200px;
+   height: 170px;
 }
 
 .humor-list {
@@ -144,10 +135,10 @@ h1, h2 {
 }
 
 .container-left-audio-paragraph {
-   background: black;
+   background: rgb(0, 255, 242);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
-   animation: blink 2s linear infinite;
+   animation: blink 1s linear infinite;
 }
       
    @keyframes blink {
