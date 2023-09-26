@@ -1,7 +1,6 @@
 /* Common styles */
 * {
    margin: 0;
-   padding: 0;
    box-sizing: border-box;
 }
 
@@ -9,8 +8,8 @@ body {
    font-family:'Oswald', Arial, Helvetica, sans-serif;
    color: black;
    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-   background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -26,7 +25,8 @@ body {
 }
 
 .header, 
-.container {
+.container,
+.footer {
    border: 5px rgb(0, 0, 0, 0.7) solid;
    border-radius: 4em;
    background-color: rgb(0, 0, 0, 0.4);
@@ -49,7 +49,8 @@ h2 {
    font-weight:800;
 }
 
-h1, h2 {
+h1, 
+.footer h2 {
    font-family: sans-serif; /* choosing our font */
    background: linear-gradient(to right, rgb(74, 4, 252) 0%, rgb(255, 230, 4) 20%, rgb(43, 255, 10) 61%), linear-gradient(rgb(0, 0, 0) 52%, rgba(0, 0, 0, 0.915) 60%, rgb(250, 3, 3) 61%); /* you can change the colors based on your preference */
    -webkit-background-clip: text; /*it defines how far the background should extend within an element, here we set it to text */
@@ -68,12 +69,11 @@ h1, h2 {
    }
 
 .wrapper {
-   display: flex;
-   flex-direction: column;
    max-width: 1440px;
    margin-right: auto;
    margin-left: auto;
    margin-top: 2em;
+   margin-bottom: 2em;
 }
 
 .header {
@@ -81,18 +81,6 @@ h1, h2 {
    justify-content: space-around;
    align-items: center;
    padding: 1em 2em;
-}
-
-.logo {
-   display: flex;
-   width: 630px;
-   align-items: center;
-   justify-content: space-between;
-}
-
-.logo img:hover {
-   width: 200px;
-   height: 170px;
 }
 
 .humor-list {
@@ -114,6 +102,16 @@ h1, h2 {
    padding: 1em 0;
    margin: 2em 3.5em;
    color: white;
+}
+
+@media (max-width: 500px) {
+   .container {
+      flex-direction: column;
+   }
+}
+
+.container-left-header {
+   color: rgb(0, 255, 242);
 }
 
 .container-left {
@@ -152,3 +150,30 @@ h1, h2 {
          opacity: 1;
       }
       }
+
+.footer {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   padding: 1em 2em ;
+   color: white;
+}
+
+footer .paragraph {
+   font-size: larger;
+   text-align: center;
+}
+
+.footer-networks {
+   display: flex;
+   gap: 1em;
+   margin-top: 1em;
+}
+
+.footer-networks-link img {
+   width: 50px;
+   height: 50px;
+}
+
+/* Media queries */
+
