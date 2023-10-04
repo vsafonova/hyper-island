@@ -97,11 +97,35 @@ body {
    color: var(--mint-colour);
 }
 
+.navigation_link {
+   transition: color 0.5s, font-size 1s;
+   position: relative;
+}
+
+.navigation_link::after {
+   content: "";
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: #e73c7e;
+   transform: scaleX(0);
+   transform-origin: 0 0;
+   transition: transform 0.5s;
+}
+
+.navigation_link:hover::after {
+   transform: scaleX(1);
+}
+
 .navigation_link:hover {
-   color: #e73c7e;
-   text-decoration: underline;
+   color: #e73c7e ;
    font-size: larger;
 }
+
+/* @keyframes animationNavigation {
+} */
 
 .section_heading {
    text-align: center;
