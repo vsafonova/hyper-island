@@ -176,7 +176,7 @@ body {
 }
 
 @media (max-width: 1200px) {
-   .video {
+   iframe {
       width: 100%;
    }
 }
